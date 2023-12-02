@@ -1,0 +1,97 @@
+*{
+    padding:0px;
+    margin:0px;
+    transition: all 0.5s;
+ }
+#navbar
+{
+    width:100%;
+    height:80px;
+    background-color: pink;
+}
+#icon
+{
+    width:60px;
+    height:60px;
+    margin:15px;
+    border-radius: 100%;
+    position: absolute;
+    top:0px;
+    mix-blend-mode: multiply;
+}
+#text
+{
+    position: absolute;
+    top:15px;
+    left:560px;
+    font-size: 50px;
+    color:black;
+}
+#profile
+{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:20px;
+    right:50px;
+    border-radius: 10px;
+}
+#mainimg
+{
+    margin-left: 650px;
+    margin-top: 20px;
+    width: 90px;
+    height:90px;
+    mix-blend-mode: multiply;
+}
+#main
+{
+    width:500px;
+    height:400px;
+    background-color: gray;
+    margin-left: 460px;
+    border-radius: 50px;
+    margin-top: -40px;
+}
+.inp
+{
+    width:400px;
+    height:50px;
+    margin-top: 70px;
+    margin-left: 50px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+#sub
+{
+    width: 120px;
+    height:40px;
+    margin-left: 200px;
+    margin-top: 30px;
+    font-size: 20px;
+    border-radius: 20px;
+   background-color: red;
+   color: white;
+   box-shadow: 5px 5px 5px black;
+}
+a
+{
+    text-decoration: none;
+}
+#reg
+{
+    text-align: center;
+    position: relative;
+    top:10px;
+    left:-30px;
+}
+#show
+{
+    width: 30px;
+    height:30px;
+    position: relative;
+    left:-45px;
+    top:10px;
+}

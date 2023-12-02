@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!-- to access thymeleaf in html (Extensible Markup Language namespace) -->
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+ <title>Document</title>
+ <link rel="icon" href="./photos/instagram.png">
+ <style>
+    *{
+    padding:0px;
+    margin:0px;
+ }
+#navbar
+{
+    width:100%;
+    height:75px;
+    background-color: pink;
+}
+#icon
+{
+    width:60px;
+    height:60px;
+    margin:10px;
+    border-radius: 100%;
+    position: absolute;
+    top:0px;
+}
+#text
+{
+    position: absolute;
+    top:15px;
+    left:560px;
+    font-size: 45px;
+    color:black;
+    text-shadow: 5px 5px 5px whitesmoke;
+    color: red;
+}
+#login
+{
+   position: absolute;
+   right: 20px;
+    width: 50px;
+    height:50px;
+    border-radius: 10px;
+    top:15px;
+}
+#reg
+{
+    position: absolute;
+    left:45vw;
+    top:75px;
+}
+#tab
+{
+    width:610px;
+    height:610px;
+    background-color: gray;
+    position: absolute;
+    top:120px;
+    left:450px;
+    border-radius: 10px;
+    text-align: center;
+}
+#tab1
+{
+    width:100%;
+    height:550px;
+    margin-left: 50px;
+
+}
+input
+{
+    font-size: 20px;
+    width: 50%;
+    height: 30px;
+   justify-content: space-between;
+   text-align: center;
+   border-radius: 10px;
+   margin-top: 30px;
+}
+#female
+{
+    position: absolute;
+    left:450px;
+    top:350px;
+    width: 30px;
+}
+#male
+{
+    position: absolute;
+    left:380px;
+    top:350px;
+    width: 30px;
+}
+#choose
+{
+    position: absolute;
+    left:220px;
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+#show
+{
+    width: 28px;
+    height:27px;
+    position: relative;
+    left:-44px;
+    top:8px;
+}
+ </style>
+</head>
+<body>
+    <div id="navbar">
+        <img id="icon" src="media/instalogo.jpg">
+        <h1 id="text">Instagram Registration</h1>
+        <img id="login" src="https://static.vecteezy.com/system/resources/previews/000/575/345/original/vector-login-sign-icon.jpg">
+    </div> 
+    <h1 id="reg">Register</h1>
+    <form action="registerOperation" method="post">
+    <div id="tab">
+        <table id="tab1">
+            <tr>
+                <td><input type="text" placeholder="Enter UserId"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter FullName" name="fullName"></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter UserName" name="userName"></td>
+            </tr>
+            <tr>
+                <td><input type="number" placeholder="Enter MobileNumber" minlength="10" maxlength="10" name="mobile"></td>
+            </tr>
+            <tr>
+                <td><input type="email" placeholder="Enter Email" name="email"></td>
+            </tr>
+            
+            <tr>
+               <td id="pass"><input  type="password" placeholder="Create Password" name="password"><img id="show" src="media/eyeclose.jpg" onmousedown="fun()" onmouseup="fun1()" > </td>
+            </tr>
+             <tr>
+               <td id="pass"><input  type="password" placeholder="Confirm Password" name="cpassword"><img id="show" src="media/eyeclose.jpg" onmousedown="fun()" onmouseup="fun1()" > </td>
+            </tr>
+           
+            <tr>
+                <td><input style="border-radius: 10px;width: 150px;height: 30px;background-color: red; color: white;box-shadow: 5p 5px 5px black;" type="submit" value="Register"></td>
+            </tr>
+       
+        </table>
+        
+    </div>
+    
+        <!-- to access message transferrd from controller 
+        ${ } - Expression language -->
+        <h1 th:text="${msg}" ></h1>
+     </form>
+    <script defer>
+        function fun()
+        {
+            document.getElementById("pass").type="text";
+            document.getElementById("show").setAttribute("src","media/eyeopen.jpg");
+        }
+        function fun1()
+        {
+            document.getElementById("pass").type="password";
+            document.getElementById("show").setAttribute("src","media/eyeclose.jpg")
+        }
+    </script>
+</body>
+</html>

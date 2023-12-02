@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="icon" href="media/instalogo.jpg">
+    <style>
+
+*{
+    padding:0px;
+    margin:0px;
+    transition: all 0.5s;
+ }
+#navbar
+{
+    width:100vw;
+    height:80px;
+    background-color: pink;
+}
+#icon
+{
+    width:60px;
+    height:60px;
+    margin:15px;
+    border-radius: 100%;
+    position: absolute;
+    top:0px;
+    mix-blend-mode: multiply;
+}
+#text
+{
+    position: absolute;
+    top:15px;
+    left:560px;
+    font-size: 50px;
+    color:black;
+}
+#profile
+{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:20px;
+    right:50px;
+    border-radius: 10px;
+}
+#login
+{
+   position: absolute;
+   right: 20px;
+    width: 50px;
+    height:50px;
+    border-radius: 10px;
+    top:15px;
+}
+#welcome
+{
+    margin-left:570px;
+    margin-top: 50px;
+    font-size: 45px;
+    color: green;
+}
+.i
+{
+    position: absolute;
+    left: 700px;
+    top:250px;
+    width: 180px;
+    height:70px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-image: linear-gradient(pink,red);
+    color: whitesmoke;
+}
+.i:hover
+{
+    background-image: radial-gradient(pink,white);
+    color:red;
+    transform: scale(1.2,1.2);
+}
+#add
+{
+    position: absolute;
+    left:400px;
+}
+#view
+{
+    position: absolute;
+    left:800px;   
+}
+#get
+{
+    position: absolute;
+    top:500px;
+    left:400px;
+}
+#filter
+{
+    position: absolute;
+    top:500px;
+    left:800px;
+}
+#a
+{
+    width:100%;
+    height:653px;
+    background-image: linear-gradient(-90deg,red,blue,gray);
+}
+#wel
+{
+    position: absolute;
+    top:400px;
+    left:580px;
+    color:greenyellow;
+    font-size: 30px;
+ }
+#wel:hover
+{
+	transform: scale(1.2);
+	cursor: pointer;
+}
+#mainbox
+{
+    width:150px;
+    height:160px;
+    position: absolute;
+    right:0px;
+    top:0px;
+}
+#lastbox
+{
+    width:150px;
+    height:10px;
+    position: absolute;
+    right:0px;
+    top:75px;
+    display: none;
+}
+.items
+{
+    font-size: 25px;
+    margin-top: 10px;
+}
+.items:hover
+{
+    background-color: gray;
+    cursor: pointer;
+    color: aliceblue;
+    font-weight: bolder;
+}
+#mainbox:hover #lastbox
+{
+    display: block;
+    z-index: 2;
+}
+#log
+{
+	text-decoration: none;
+	color: black;
+}   </style>
+</head>
+<body>
+    <div id="navbar">
+        <img id="icon" src="../media/instalogo.jpg">
+        <h1 id="text">Instagram</h1>
+        <div id="mainbox">
+            <img id="profile" src="../media/user.jpg">
+            <div id="lastbox">
+            <ul type="none">
+                <a><li class="items">About Us</li></a>
+                <a><li class="items">Mani</li></a>
+                <a><li class="items">MK</li></a>
+                <a href="/logout" id="log"><li class="items">Logout</li></a>
+            </ul>
+        </div> 
+        </div>
+    <h1 id="wel">Welcome
+		 <!-- <span th:text="${userInfo.fullName}"></span> -->
+		 <span th:if="${session != null}" th:text="${session.userData.fullName}"></span>
+		 </h1>
+    <div id="a">
+    <a href="/expense/add"><input class="i" type="submit" id="add" value="Add Expenses"></a>
+    <a href="/expense/displayExpenseView"><input class="i" type="submit" id="view" value="View Expenses"></a>
+    <a href="/expense/total"><input class="i" type="submit" id="get" value="Get Total"></a>
+    <a href="/expense/filter"><input class="i" type="submit" id="filter" value="Filter Expenses"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+*{
+    padding:0px;
+    margin:0px;
+ }
+#navbar
+{
+    width:100%;
+    height:80px;
+    background-color: pink;
+}
+#icon
+{
+    width:50px;
+    height:50px;
+    margin:15px;
+    border-radius: 100%;
+}
+#text
+{
+    position: absolute;
+    top:20px;
+    left:100px;
+    color:red;
+}
+#profile
+{
+    width:50px;
+    height:50px;
+    position: absolute;
+    top:20px;
+    right:50px;
+    border-radius: 10px;
+}
+#main
+{
+    margin-top: 50px;
+    width:100vw;
+    height:480px;
+    background-image: linear-gradient(red,green,blue);
+    position: relative;
+}
+#bk
+{
+    width:100vw;
+    height:500px;
+}
+#left
+{
+    margin: 100px;
+    width:30vw;
+    height:300px;
+    position: absolute;
+    border-radius: 50px;
+    top:0px;
+}
+#right
+{
+    margin: 100px;
+    width:40vw;
+    height:200px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 20px 20px 20px gainsboro;
+    top: 0px;
+    right:100px;
+    background-image:linear-gradient(yellow,green);
+    font-size: 20px;
+    word-spacing: 10px;
+}
+#taskbar
+{
+    width:100vw;
+    height:80px;
+    background-color: pink;
+    position: absolute;
+    bottom: 0px;
+}
+#copy
+{
+    font-size: 25px;
+    margin-left: 38vw;
+    position: absolute;
+    top:25px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/instagramlogin.css">
+    <link rel="icon" href="media/instalogo.jpg">
+</head>
+<body>
+    <form action="loginOperation" method="post">
+    <div id="navbar">
+        <img id="icon" src="media/instalogo.jpg">
+        <h1 id="text">Instagram Login</h1>
+    </div> 
+    <img id="mainimg" src="media/user.jpg">
+    <div id="main">
+        <input class="inp" type="text" placeholder="Enter UserName" name="userName"><br><br>
+        <input class="inp" id="pass" type="password" placeholder="Enter Password" name="password"><img id="show" src="media/eyeclose.jpg" onmousedown="fun()" onmouseup="fun1()" ><br><br>
+       <input type="submit" value="Login" id="sub">
+    </div>
+   
+    <a href="register"><h1 id="reg">New User ?</h1></a>
+</form>
+ 		 <center><h1 th:text="${msg}"></h1></center>
+    <script defer>
+        var a=document.getElementsByClassName(".inp").value
+        function fun()
+        {
+            document.getElementById("pass").type="text";
+            document.getElementById("show").setAttribute("src","media/eyeopen.jpg");
+        }
+        function fun1()
+        {
+            document.getElementById("pass").type="password";
+            document.getElementById("show").setAttribute("src","media/eyeclose.jpg")
+        }
+    </script>
+</body>
+</html>
